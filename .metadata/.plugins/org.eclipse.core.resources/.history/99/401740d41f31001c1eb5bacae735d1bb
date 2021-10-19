@@ -15,7 +15,6 @@
 int verCantidadDeSalonHay(Arcade lista_arcade[],int len_arcade, Salon lista_salon[],int len_salon);
 void informe_arcadeMasDeCuatro(Salon lista [],int len_salon,Arcade lista_arcade[],int len_arcade);
 void informe_arcadeDosJugadores(Arcade lista[],int len_arcade,Salon lista_salon[],int len_salon);
-void iniciarCantidadDeJuegoEnCero(Salon lista_salon[],int len_salon);
 int informe_salonPorId(Salon lista_salon[],int len_salon,Arcade lista_arcade[], int len_arcade);
 void informe_listarArcadePorId(Arcade lista_arcade[],int len_arcade,Salon lista_salon[],int len_salon,int posicionId);
 void informe_listarUnSoloSalonPoirId(Salon lista[],int indice);

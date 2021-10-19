@@ -117,6 +117,33 @@ void salon_mostrarUno(Salon lista[],int i)
 	printf("\nid:%d nombre:%s direccion:%s tipo:%s cantidad de arcades que posee %d\n",lista[i].id,lista[i].nombre,lista[i].direccion,auxTipo,lista[i].cantidadDeJuegos);
 }
 
+int salon_baja(Salon lista[],int len)
+{
+	int auxId;
+	int retorno=0;
+	salon_mostrarStructura(lista, len);
+	int indice;
+	utn_getInt(&auxId, "\ningrese el id que quiere de dar de baja \n", "error ingrese un numero valido\n", 0, len, 4);
+
+	if (len!=0&&lista!=NULL)
+	{
+
+		auxId=salon_buscarId(lista, len, auxId,&indice);
+			if(auxId!=-1)
+			{
+
+			salon_bajaMenu(lista, len, indice);
+			retorno=1;
+
+			}
+			else
+			{
+				printf("no existe el id\n");
+			}
+
+		}
+	return retorno;
+	}
 
 
 void transefrirDatos(Salon listado  [],Salon auxiliarListado  [],int len)

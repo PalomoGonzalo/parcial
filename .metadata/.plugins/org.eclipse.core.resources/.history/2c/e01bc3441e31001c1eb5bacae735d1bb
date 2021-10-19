@@ -31,7 +31,7 @@ int salon_menuModificar(Salon lista[],int len,int indice);
 int salon_modificar(Salon lista[],int len);
 void salon_mostrarUno(Salon lista[],int indice);
 
-
+int salon_baja(Salon lista[],int len);
 void transefrirDatos(Salon listado  [],Salon auxiliarListado  [],int len);
 char salon_reemplazarTipo(int tipo,char *retorno,int len);
 int salon_ordenarArraySegunCriterio(Salon lista [], int len, int orden);

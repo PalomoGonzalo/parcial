@@ -61,7 +61,7 @@ int main(void) {
 						break;
 					case 2:
 						if(retornoAdd==1)
-							salon_baja(lista_salon, LEN_SALON,lista_arcade,LEN_ARCADE);
+							salon_baja(lista_salon, LEN_SALON);
 						else
 							printf("no hay datos cargados \n");
 						break;

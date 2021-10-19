@@ -15,7 +15,6 @@
 int verCantidadDeSalonHay(Arcade lista_arcade[],int len_arcade, Salon lista_salon[],int len_salon);
 void informe_arcadeMasDeCuatro(Salon lista [],int len_salon,Arcade lista_arcade[],int len_arcade);
 void informe_arcadeDosJugadores(Arcade lista[],int len_arcade,Salon lista_salon[],int len_salon);
-void iniciarCantidadDeJuegoEnCero(Salon lista_salon[],int len_salon);
 int informe_salonPorId(Salon lista_salon[],int len_salon,Arcade lista_arcade[], int len_arcade);
 void informe_listarArcadePorId(Arcade lista_arcade[],int len_arcade,Salon lista_salon[],int len_salon,int posicionId);
 void informe_listarUnSoloSalonPoirId(Salon lista[],int indice);
@@ -26,7 +25,5 @@ float informe_recaudarPorFicha(Arcade lista_arcade[],int len_arcade,Salon lista_
 int acumuladorDeFichas(Arcade lista_arcade[],int len_arcade,Salon lista_salon[], int len_salon,int indiceId);
 int informe_juegoContadorArcade(Arcade list[],int len_arcade, char juego[],int *contador);
 void informe_imprimirContadorArcadePorJuego(Listajuegos lista_juegos[],int len_salon, Arcade lista_arcade[],int len_arcade);
-int salon_bajaMenu(Salon lista[],int len,int indice,Arcade lista_arcade[],int len_arcade);
-int salon_baja(Salon lista[],int len,Arcade lista_arcade[],int len_arcade);
-int salonQueTieneArcade(Salon lista_salon[], int len_salon, Arcade lista_arcade[],int len_arcade,int indiceId);
+int salon_bajaMenu(Salon lista[],int len,int indice);
 #endif /* INFORMES_H_ */

@@ -44,7 +44,6 @@ int salon_bajaMenu(Salon lista[],int len,int indice,Arcade lista_arcade[],int le
 	if (len!=0&&lista!=NULL)
 	{
 		printf("este es el salon que quiere dar de baja:\n");
-		verCantidadDeSalonHay(lista_arcade, len_arcade, lista, len);
 		salon_mostrarUno(lista, indice);
 		utn_getInt(&auxBaja, "Aprete 1 para dar de baja 2 para cancelar", "error ingrese un numero valido", 1, 2, 3);
 
@@ -86,11 +85,11 @@ int salonQueTieneArcade(Salon lista_salon[], int len_salon, Arcade lista_arcade[
 int verCantidadDeSalonHay(Arcade lista_arcade[],int len_arcade, Salon lista_salon[],int len_salon)
 {
 	int retorno=-1;
-	iniciarCantidadDeJuegoEnCero(lista_salon, len_salon);
 	for (int i=0;i<len_arcade;i++)
 		{
 			for (int j=0;j<len_salon;j++)
 			{
+				lista_salon[j].cantidadDeJuegos=0;
 				if(lista_arcade[i].flagEmpty==OCUPADO&&lista_salon[j].flagEmpty==OCUPADO)
 				{
 					if(lista_arcade[i].idSalon==lista_salon[j].id)
@@ -102,14 +101,6 @@ int verCantidadDeSalonHay(Arcade lista_arcade[],int len_arcade, Salon lista_salo
 			}
 		}
 	return retorno;
-}
-void iniciarCantidadDeJuegoEnCero(Salon lista_salon[],int len_salon)
-{
-	for(int i=0;i<len_salon;i++)
-	{
-		lista_salon[i].cantidadDeJuegos=0;
-	}
-
 }
 
 void informe_arcadeMasDeCuatro(Salon lista [],int len_salon,Arcade lista_arcade[],int len_arcade)

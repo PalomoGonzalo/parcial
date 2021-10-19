@@ -86,7 +86,6 @@ int salonQueTieneArcade(Salon lista_salon[], int len_salon, Arcade lista_arcade[
 int verCantidadDeSalonHay(Arcade lista_arcade[],int len_arcade, Salon lista_salon[],int len_salon)
 {
 	int retorno=-1;
-	iniciarCantidadDeJuegoEnCero(lista_salon, len_salon);
 	for (int i=0;i<len_arcade;i++)
 		{
 			for (int j=0;j<len_salon;j++)
