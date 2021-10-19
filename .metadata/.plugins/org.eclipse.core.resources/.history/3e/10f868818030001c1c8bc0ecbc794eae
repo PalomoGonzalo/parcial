@@ -114,15 +114,15 @@ void informe_listarArcadePorId(Arcade lista_arcade[],int len_arcade,Salon lista_
 	}
 
 }
-void informe_imprimirArcadePorId(Arcade lista_arcade[],int len_arcade, Salon lista_salon[],int len_salon)
+void informe_ArcadePorId(Arcade lista_arcade[],int len_arcade, Salon lista_salon[],int len_salon)
 {
 	int idSalon;
 	int posicionIdSalon;
-	utn_getInt(&idSalon, "\ningrese el id de salon para buscar los arcades \n","error reingrese \n", 1, len_salon, 7);
-	if (salon_buscarId(lista_salon, len_salon, idSalon, &posicionIdSalon)== 0)
+	utn_getInt(&idSalon, "\ningrese el id de salon para buscar los arcades \n","error reingrese \n", 1, LEN_SALON, 7);
+	if (salon_buscarId(lista_salon, LEN_SALON, idSalon, &posicionIdSalon)== 0)
 	{
 		informe_listarUnSoloSalonPoirId(lista_salon, posicionIdSalon);
-		informe_listarArcadePorId(lista_arcade, len_arcade, lista_salon,len_salon, posicionIdSalon);
+		informe_listarArcadePorId(lista_arcade, LEN_ARCADE, lista_salon,LEN_SALON, posicionIdSalon);
 	}
 	else
 		printf("El id no existe reeingrese \n");
@@ -208,43 +208,8 @@ float informe_recaudarPorFicha(Arcade lista_arcade[],int len_arcade,Salon lista_
 	return resultado;
 
 }
-int informe_juegoContadorArcade(Arcade list[],int len_arcade, char juego[],int *contador)
-{
-	int indice=-1;
-	int contadorAux=0;
-	int i;
-	for (i=0;i<len_arcade;i++)
-	{
-		if(list[i].flagEmpty==OCUPADO)
-		{
-			if(strnicmp(list[i].nombreJuego,juego,32)==0)
-			{
-				indice=0;
-				contadorAux++;
-			}
-		}
-	}
-	*contador=contadorAux;
-	return indice ;
-}
 
 
-void informe_imprimirContadorArcadePorJuego(Listajuegos lista_juegos[],int len_salon, Arcade lista_arcade[],int len_arcade)
-{
-	char juego[32];
-	int cantidadDeJuegos;
-	generListaJuegos(lista_juegos, len_salon, lista_arcade, len_arcade);
-	juegos_mostrarStructura(lista_juegos, len_salon);
-	getString("INGRESE NOMBRE DEL JUEGO PARA BUSCAR LA CANTIDAD DE ARCADE QUE CONTIENE \n", juego);
-	if(informe_juegoContadorArcade(lista_arcade, len_arcade, juego,&cantidadDeJuegos)==0)
-	{
-		printf("ESTE JUEGO LO CONTIENEN %d DE ARCADES\n", cantidadDeJuegos);
-
-	}
-	else
-		printf("el juego no existe\n");
-
-}
 
 
 

@@ -24,7 +24,9 @@ int main(void) {
 	char seguir='s';
 	int opcion;
 	int retornoAdd=1;
+	int idSalon;
 	int opcionInformar;
+	int posicionIdSalon;
 	Salon lista_salon[LEN_SALON];
 	salon_inicializarArray(lista_salon, LEN_SALON);
 
@@ -111,7 +113,14 @@ int main(void) {
 								break;
 							case 4:
 								salon_mostrarStructura(lista_salon, LEN_SALON);
-								informe_imprimirArcadePorId(lista_arcade, LEN_ARCADE, lista_salon, LEN_SALON);
+								utn_getInt(&idSalon, "\ningrese el id de salon para buscar los arcades \n", "error reingrese \n", 1, LEN_SALON, 7);
+								if(salon_buscarId(lista_salon, LEN_SALON, idSalon, &posicionIdSalon)==0)
+								{
+									informe_listarUnSoloSalonPoirId(lista_salon, posicionIdSalon);
+									informe_listarArcadePorId(lista_arcade, LEN_ARCADE, lista_salon, LEN_SALON, posicionIdSalon);
+								}
+								else
+									printf("El id no existe reeingrese \n");
 								break;
 							case 5:
 									informe_Max(lista_salon, LEN_SALON, lista_arcade, LEN_ARCADE);
@@ -121,8 +130,6 @@ int main(void) {
 									informe_recaudarPorFicha(lista_arcade, LEN_ARCADE, lista_salon, LEN_SALON);
 									break;
 							case 7:
-								informe_imprimirContadorArcadePorJuego(lista_juegos, LEN_SALON, lista_arcade, LEN_ARCADE);
-
 								break;
 							case 8:
 								break;

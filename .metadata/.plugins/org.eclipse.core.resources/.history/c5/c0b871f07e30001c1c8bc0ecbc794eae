@@ -24,7 +24,9 @@ int main(void) {
 	char seguir='s';
 	int opcion;
 	int retornoAdd=1;
+	int idSalon;
 	int opcionInformar;
+	int posicionIdSalon;
 	Salon lista_salon[LEN_SALON];
 	salon_inicializarArray(lista_salon, LEN_SALON);
 
@@ -97,7 +99,7 @@ int main(void) {
 						generListaJuegos(lista_juegos, LEN_SALON, lista_arcade, LEN_ARCADE);
 						break;
 					case 9:
-						utn_getInt(&opcionInformar, "\n 1-Listar salones con 4 arcades \n 2-Listar Arcades para mas de dos jugadores \n 3-Imprimir Salon por id \n 4-Listar Arcades Por id Salon\n 5-Salon con mas cantidad de Arcades\n 6-monto maximo que puede recuadar el salon \n 7-Imprimir arcades por nombre de juego\n 8-salir", "error ingrese numeros validos", 1, 11, 8);
+						utn_getInt(&opcionInformar, "\n 1-Listar salones con 4 arcades \n 2-Listar Arcades para mas de dos jugadores \n 3-Imprimir Salon por id \n 4-Listar Arcades Por id Salon\n 5-Salon con mas cantidad de Arcades\n 6-monto maximo que recuadar el salon \n 7-Imprimir Arcade\n 8-Imprimir Juegos \n 9-Informes \n 10-Salir\n", "error ingrese numeros validos", 1, 11, 8);
 						switch(opcionInformar)
 						{
 							case 1:
@@ -110,22 +112,21 @@ int main(void) {
 								informe_salonPorId(lista_salon, LEN_SALON, lista_arcade, LEN_ARCADE);
 								break;
 							case 4:
-								salon_mostrarStructura(lista_salon, LEN_SALON);
-								informe_imprimirArcadePorId(lista_arcade, LEN_ARCADE, lista_salon, LEN_SALON);
+								//salon_mostrarStructura(lista_salon, LEN_SALON);
+								utn_getInt(&idSalon, "\ningrese el id de salon para buscar los arcades \n", "error reingrese \n", 1, LEN_SALON, 7);
+								if(salon_buscarId(lista_salon, LEN_SALON, idSalon, &posicionIdSalon)==0)
+								{
+									informe_listarUnSoloSalonPoirId(lista_salon, posicionIdSalon);
+									informe_listarArcadePorId(lista_arcade, LEN_ARCADE, lista_salon, LEN_SALON, posicionIdSalon);
+								}
+								else
+									printf("El id no existe reeingrese \n");
 								break;
 							case 5:
-									informe_Max(lista_salon, LEN_SALON, lista_arcade, LEN_ARCADE);
+								informe_Max(lista_salon, LEN_SALON, lista_arcade, LEN_ARCADE);
 								break;
 							case 6:
-									salon_mostrarStructura(lista_salon, LEN_SALON);
 									informe_recaudarPorFicha(lista_arcade, LEN_ARCADE, lista_salon, LEN_SALON);
-									break;
-							case 7:
-								informe_imprimirContadorArcadePorJuego(lista_juegos, LEN_SALON, lista_arcade, LEN_ARCADE);
-
-								break;
-							case 8:
-								break;
 
 
 

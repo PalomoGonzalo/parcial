@@ -114,22 +114,6 @@ void informe_listarArcadePorId(Arcade lista_arcade[],int len_arcade,Salon lista_
 	}
 
 }
-void informe_imprimirArcadePorId(Arcade lista_arcade[],int len_arcade, Salon lista_salon[],int len_salon)
-{
-	int idSalon;
-	int posicionIdSalon;
-	utn_getInt(&idSalon, "\ningrese el id de salon para buscar los arcades \n","error reingrese \n", 1, len_salon, 7);
-	if (salon_buscarId(lista_salon, len_salon, idSalon, &posicionIdSalon)== 0)
-	{
-		informe_listarUnSoloSalonPoirId(lista_salon, posicionIdSalon);
-		informe_listarArcadePorId(lista_arcade, len_arcade, lista_salon,len_salon, posicionIdSalon);
-	}
-	else
-		printf("El id no existe reeingrese \n");
-
-
-
-}
 
 void informe_listarUnSoloSalonPoirId(Salon lista[],int indice)
 {
@@ -169,82 +153,9 @@ int maxSalon(Salon lista_salon[],int len_salon)
 	 return indice;
 }
 
-int acumuladorDeFichas(Arcade lista_arcade[],int len_arcade,Salon lista_salon[], int len_salon,int indiceId)
-{
-	int acumulador=0;
-	for(int i=0;i<len_arcade;i++)
-	{
-		if(lista_arcade[i].flagEmpty==OCUPADO)
-		{
-			if(lista_arcade[i].idSalon==lista_salon[indiceId].id)
-			{
-				acumulador=acumulador+lista_arcade[i].capacidadMaxFicha;
-			}
-		}
-	}
-	return acumulador;
-
-}
-float informe_recaudarPorFicha(Arcade lista_arcade[],int len_arcade,Salon lista_salon[], int len_salon)
-{
-	int acumulador=0;
-	int indiceId;
-	int id;
-	float precio;
-	float resultado;
-	utn_getInt(&id, "\ningrese el id de salon para calcular el monto maximo que se puede generar \n", "error reingrese \n", 1, len_salon, 7);
-
-	if(salon_buscarId(lista_salon, len_salon, id, &indiceId)==0)
-		{
-		salon_mostrarUno(lista_salon, indiceId);
-		utn_getFloat(&precio, "\ningrese el id de salon para calcular el monto maximo que se puede generar \n", "error reingrese \n", 1, 99999, 7);
-		acumulador=acumuladorDeFichas(lista_arcade, len_arcade, lista_salon, len_salon, indiceId);
-		resultado=(float)acumulador*precio;
-		}
-	else
-		printf("el id no existe\n");
-
-	printf("\n ESTE SALON PUEDE RECAUDAR: %0.2f\n",resultado);
-	return resultado;
-
-}
-int informe_juegoContadorArcade(Arcade list[],int len_arcade, char juego[],int *contador)
-{
-	int indice=-1;
-	int contadorAux=0;
-	int i;
-	for (i=0;i<len_arcade;i++)
-	{
-		if(list[i].flagEmpty==OCUPADO)
-		{
-			if(strnicmp(list[i].nombreJuego,juego,32)==0)
-			{
-				indice=0;
-				contadorAux++;
-			}
-		}
-	}
-	*contador=contadorAux;
-	return indice ;
-}
 
 
-void informe_imprimirContadorArcadePorJuego(Listajuegos lista_juegos[],int len_salon, Arcade lista_arcade[],int len_arcade)
-{
-	char juego[32];
-	int cantidadDeJuegos;
-	generListaJuegos(lista_juegos, len_salon, lista_arcade, len_arcade);
-	juegos_mostrarStructura(lista_juegos, len_salon);
-	getString("INGRESE NOMBRE DEL JUEGO PARA BUSCAR LA CANTIDAD DE ARCADE QUE CONTIENE \n", juego);
-	if(informe_juegoContadorArcade(lista_arcade, len_arcade, juego,&cantidadDeJuegos)==0)
-	{
-		printf("ESTE JUEGO LO CONTIENEN %d DE ARCADES\n", cantidadDeJuegos);
 
-	}
-	else
-		printf("el juego no existe\n");
-
-}
 
 
 

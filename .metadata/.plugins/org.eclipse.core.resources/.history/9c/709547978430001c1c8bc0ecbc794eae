@@ -23,6 +23,6 @@ int maxSalon(Salon lista_salon[],int len_salon);
 void informe_Max(Salon lista_salon[], int len_salon, Arcade lista_arcade[], int len_arcade);
 float informe_recaudarPorFicha(Arcade lista_arcade[],int len_arcade,Salon lista_salon[], int len_salon);
 int acumuladorDeFichas(Arcade lista_arcade[],int len_arcade,Salon lista_salon[], int len_salon,int indiceId);
-int informe_juegoContadorArcade(Arcade list[],int len_arcade, char juego[],int *contador);
-void informe_imprimirContadorArcadePorJuego(Listajuegos lista_juegos[],int len_salon, Arcade lista_arcade[],int len_arcade);
+int informe_juegoContadorArcade(Listajuegos list[],int len, char juego[],int * contador);
+void informe_imprimirContadorArcade(Listajuegos lista_juegos[],len_salon, Arcade lista_arcade, len_arcade);
 #endif /* INFORMES_H_ */

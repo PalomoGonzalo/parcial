@@ -208,10 +208,9 @@ float informe_recaudarPorFicha(Arcade lista_arcade[],int len_arcade,Salon lista_
 	return resultado;
 
 }
-int informe_juegoContadorArcade(Arcade list[],int len_arcade, char juego[],int *contador)
+int informe_juegoContadorArcade(Arcade list[],int len_arcade, char juego[])
 {
-	int indice=-1;
-	int contadorAux=0;
+	int retorno=0;
 	int i;
 	for (i=0;i<len_arcade;i++)
 	{
@@ -219,31 +218,19 @@ int informe_juegoContadorArcade(Arcade list[],int len_arcade, char juego[],int *
 		{
 			if(strnicmp(list[i].nombreJuego,juego,32)==0)
 			{
-				indice=0;
-				contadorAux++;
+
+				retorno++;
 			}
 		}
 	}
-	*contador=contadorAux;
-	return indice ;
+	return retorno;
 }
-
-
-void informe_imprimirContadorArcadePorJuego(Listajuegos lista_juegos[],int len_salon, Arcade lista_arcade[],int len_arcade)
+void informe_imprimirContadorArcade(Listajuegos lista_juegos[],len_salon, Arcade lista_arcade, len_arcade)
 {
 	char juego[32];
 	int cantidadDeJuegos;
 	generListaJuegos(lista_juegos, len_salon, lista_arcade, len_arcade);
-	juegos_mostrarStructura(lista_juegos, len_salon);
-	getString("INGRESE NOMBRE DEL JUEGO PARA BUSCAR LA CANTIDAD DE ARCADE QUE CONTIENE \n", juego);
-	if(informe_juegoContadorArcade(lista_arcade, len_arcade, juego,&cantidadDeJuegos)==0)
-	{
-		printf("ESTE JUEGO LO CONTIENEN %d DE ARCADES\n", cantidadDeJuegos);
-
-	}
-	else
-		printf("el juego no existe\n");
-
+	cantidadDeJuegos=informe_juegoContadorArcade(lista_juegos, len_arcade, juego);
 }
 
 

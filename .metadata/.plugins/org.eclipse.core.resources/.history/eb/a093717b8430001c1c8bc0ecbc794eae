@@ -24,7 +24,9 @@ int main(void) {
 	char seguir='s';
 	int opcion;
 	int retornoAdd=1;
+	int idSalon;
 	int opcionInformar;
+	int posicionIdSalon;
 	Salon lista_salon[LEN_SALON];
 	salon_inicializarArray(lista_salon, LEN_SALON);
 
@@ -121,8 +123,6 @@ int main(void) {
 									informe_recaudarPorFicha(lista_arcade, LEN_ARCADE, lista_salon, LEN_SALON);
 									break;
 							case 7:
-								informe_imprimirContadorArcadePorJuego(lista_juegos, LEN_SALON, lista_arcade, LEN_ARCADE);
-
 								break;
 							case 8:
 								break;

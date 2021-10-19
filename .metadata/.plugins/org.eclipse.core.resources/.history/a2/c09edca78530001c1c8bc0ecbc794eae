@@ -211,7 +211,6 @@ float informe_recaudarPorFicha(Arcade lista_arcade[],int len_arcade,Salon lista_
 int informe_juegoContadorArcade(Arcade list[],int len_arcade, char juego[],int *contador)
 {
 	int indice=-1;
-	int contadorAux=0;
 	int i;
 	for (i=0;i<len_arcade;i++)
 	{
@@ -220,11 +219,10 @@ int informe_juegoContadorArcade(Arcade list[],int len_arcade, char juego[],int *
 			if(strnicmp(list[i].nombreJuego,juego,32)==0)
 			{
 				indice=0;
-				contadorAux++;
+				contador++;
 			}
 		}
 	}
-	*contador=contadorAux;
 	return indice ;
 }
 
@@ -234,7 +232,6 @@ void informe_imprimirContadorArcadePorJuego(Listajuegos lista_juegos[],int len_s
 	char juego[32];
 	int cantidadDeJuegos;
 	generListaJuegos(lista_juegos, len_salon, lista_arcade, len_arcade);
-	juegos_mostrarStructura(lista_juegos, len_salon);
 	getString("INGRESE NOMBRE DEL JUEGO PARA BUSCAR LA CANTIDAD DE ARCADE QUE CONTIENE \n", juego);
 	if(informe_juegoContadorArcade(lista_arcade, len_arcade, juego,&cantidadDeJuegos)==0)
 	{
