@@ -1,0 +1,25 @@
+/*
+ * arcade.h
+ *
+ *  Created on: 16 oct. 2021
+ *      Author: mati_
+ */
+
+#ifndef ARCADE_H_
+#define ARCADE_H_
+typedef struct {
+
+	int idSalon;
+	int id;
+	int tipoDeSonido;
+	int capacidadMaxFicha;
+	int cantidadDeJugadores;
+	char nacionalidad[64];
+	int flagEmpty;
+}Arcade;
+int arcade_inicializarArray( Arcade lista[],int len);
+int arcade_dameIdNuevo(void);
+int arcade_buscarLugarLibre(Arcade displaysList[],int len);
+
+
+#endif /* ARCADE_H_ */

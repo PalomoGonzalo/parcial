@@ -1,0 +1,47 @@
+/*
+ * juegos.c
+ *
+ *  Created on: 18 oct. 2021
+ *      Author: mati_
+ */
+#define OCUPADO 0
+#define LIBRE 1
+#include "juegos.h"
+
+int juegos_init(Listajuegos lista[],int len)
+{
+
+	int retorno =-1;
+	if(lista != NULL)
+	{
+		for(int i=0;i<len;i++)
+		{
+			lista[i].flagEmpty=LIBRE;
+			retorno=1;
+
+		}
+	}
+	return retorno;
+}
+
+int juegos_estaEnArcade(Listajuegos list[],int len, char juego[])
+{
+	int retorno=0;
+	int i;
+	for (i=0;i<len;i++)
+	{
+		if(list[i].flagEmpty==0)
+		{
+			if(strncmp(list[i].nombreJuego,juego,32)==0)
+			{
+
+				retorno=1;
+				break;
+			}
+		}
+	}
+	return retorno;
+}
+
+
+

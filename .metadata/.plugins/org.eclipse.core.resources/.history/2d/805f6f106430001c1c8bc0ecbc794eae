@@ -1,0 +1,47 @@
+/*
+ * informes.c
+ *
+ *  Created on: 18 oct. 2021
+ *      Author: mati_
+ */
+
+#include "informes.h"
+
+
+int verCantidadDeSalonHay(Arcade lista_arcade,int len_arcade, Salon lista_salon,int len_salon)
+{
+	int retorno=-1;
+	for (int i=0;i<verCantidadDeSalonHay;i++)
+		{
+			for (int j=0;j<len_salon;j++)
+			{
+				if(lista_arcade[i].flagEmpty==OCUPADO&&lista_salon[j].flagEmpty==OCUPADO)
+				{
+					if(lista_arcade[i].idSalon==lista_salon[j].id)
+					{
+						lista_salon[j].cantidadDeJuegos++;
+						retorno=0;
+					}
+				}
+			}
+		}
+	return retorno;
+}
+
+void informe_arcadeMasDeCuatro(Salon lista [],int len_salon,Arcade lista_arcade,int len_arcade)
+{
+    int i;
+    char auxTipo[38];
+    printf("id:\tnombre:\t  direccion:\t tipo:\t");
+    for(i=0; i<len_salon; i++)
+    {
+        if(lista[i].flagEmpty==OCUPADO)
+        {
+        	salon_reemplazarTipo(lista[i].tipo, auxTipo, sizeof(auxTipo));
+        	printf("\n%5d\t%10s\t%10s\t%10s\t%d\t",lista[i].id,lista[i].nombre,lista[i].direccion,auxTipo,lista[i].cantidadDeJuegos);
+
+
+        }
+    }
+
+}

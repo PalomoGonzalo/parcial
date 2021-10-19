@@ -1,0 +1,34 @@
+/*
+ * arcade.h
+ *
+ *  Created on: 16 oct. 2021
+ *      Author: mati_
+ */
+#include "juegos.h"
+#ifndef ARCADE_H_
+#define ARCADE_H_
+typedef struct {
+
+	int idSalon;
+	int id;
+	int tipoDeSonido;
+	int capacidadMaxFicha;
+	int cantidadDeJugadores;
+	char nacionalidad[64];
+	char nombreJuego[32];
+	int flagEmpty;
+}Arcade;
+int arcade_inicializarArray( Arcade lista[],int len);
+int arcade_dameIdNuevo(void);
+int arcade_buscarLugarLibre(Arcade displaysList[],int len);
+char arcade_reemplazarTipo(int tipo,char *retorno,int len);
+void arcade_mostrarStructura(Arcade mostrar [],int len);
+int arcade_buscarId(Arcade listado[],int len, int id,int* indice);
+int arcade_alta( Arcade lista_arcade[],int len,Salon lista[],int lenSalon);
+void arcade_mostrarUno(Arcade lista[],int i);
+int arcade_modificar(Arcade lista_arcade[],int len, Listajuegos lista_juegos[], int len_juegos);
+int arcade_menuModificar(Arcade lista[],int len,int indice,Listajuegos lista_juegos[],int len_juegos);
+int arcade_altaHardcodeada(Arcade lista[],char* nombreJuego,char * nacionalidad,int tipoSonido,int fichas,int idSalon,int cantJugadores,int len,int indice);
+int generListaJuegos(Listajuegos lista_juegos[],int len_juegos,Arcade lista_arcade[],int len_arcade);
+void juegos_mostrarStructura(Listajuegos lista [],int len);
+#endif /* ARCADE_H_ */

@@ -1,0 +1,28 @@
+/*
+ * informes.c
+ *
+ *  Created on: 18 oct. 2021
+ *      Author: mati_
+ */
+
+#include "informes.h"
+
+
+void mostrar_salonYarcade(Arcade lista_arcade, Salon lista_salon)
+{
+	for (int i=0;i<lista_arcade;i++)
+		{
+			for (int j=0;j<lista_salon;j++)
+			{
+				if(lista_arcade[i].flagEmpty==OCUPADO&&lista_salon[j].flagEmpty==OCUPADO)
+				{
+					if(lista_publicacion[i].idCliente==lista_cliente[j].id)
+					{
+
+					}
+				}
+			}
+		}
+
+
+}

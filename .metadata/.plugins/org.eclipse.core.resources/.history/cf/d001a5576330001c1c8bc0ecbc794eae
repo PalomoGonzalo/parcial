@@ -1,0 +1,29 @@
+/*
+ * informes.c
+ *
+ *  Created on: 18 oct. 2021
+ *      Author: mati_
+ */
+
+#include "informes.h"
+
+
+void mostrar_salonYarcade(Arcade lista_arcade, Salon lista_salon)
+{
+	printf("\n\nid:\tnacionalidad:\tipo de sonido:\tcant jugad:\tfichas maximas:\t id salon:\tnombre del juego:");
+	for (int i=0;i<lista_arcade;i++)
+		{
+			for (int j=0;j<lista_salon;j++)
+			{
+				if(lista_arcade[i].flagEmpty==OCUPADO&&lista_salon[j].flagEmpty==OCUPADO)
+				{
+					if(lista_arcade[i].idSalon==lista_salon[j].id)
+					{
+						if(lista_arcade[i])
+					}
+				}
+			}
+		}
+
+
+}

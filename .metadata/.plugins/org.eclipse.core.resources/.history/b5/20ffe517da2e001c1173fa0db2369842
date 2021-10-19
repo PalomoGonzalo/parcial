@@ -1,0 +1,14 @@
+/*
+ * arcade.h
+ *
+ *  Created on: 16 oct. 2021
+ *      Author: mati_
+ */
+
+#ifndef ARCADE_H_
+#define ARCADE_H_
+int arcade_inicializarArray( Arcade lista[],int len);
+
+
+
+#endif /* ARCADE_H_ */

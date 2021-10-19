@@ -1,0 +1,68 @@
+/*
+ * juegos.c
+ *
+ *  Created on: 18 oct. 2021
+ *      Author: mati_
+ */
+
+
+
+int juegos_init(Listajuegos lista[],int len)
+{
+
+	int retorno =-1;
+	if(lista != NULL)
+	{
+		for(int i=0;i<len;i++)
+		{
+			lista[i].flagEmpty=VACIO;
+			retorno=1;
+
+		}
+	}
+	return retorno;
+}
+
+int juegos_estaEnArcade(Listajuegos list[],int len, char juego[])
+{
+	int retorno=0;
+	int i;
+	for (i=0;i<len;i++)
+	{
+		if(list[i].flagEmpty==0)
+		{
+			if(strncmp(list[i].nombreJuego,juego,32)==0)
+			{
+
+				retorno=1;
+				break;
+			}
+		}
+	}
+	return retorno;
+}
+
+int generListaJuegos(Listajuegos lista_juegos[],int len_juegos,Arcade lista_arcade[],int len_arcade)
+{
+	int retorno=-1;
+	int i;
+	int indiceListaJuegos=0;
+	juego_init(lista_juegos, len_juegos);
+	for(i=0;i<lista_arcade;i++)
+	{
+		if(lista_arcade[i].flagEmpty==0)
+		{
+			if(juegos_estaEnArcade(lista_juegos, len_juegos, lista_arcade[i].nombreJuego)==0)
+			{
+				strncmp(lista_juegos[indiceListaJuegos].nombreJuego,lista_arcade[i].nombreJuego,32);
+				lista_juegos[indiceListaJuegos].flagEmpty=0;
+				indiceListaJuegos++;
+				retorno=0;
+
+			}
+		}
+	}
+
+	return retorno;
+}
+

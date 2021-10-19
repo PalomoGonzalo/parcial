@@ -1,0 +1,16 @@
+/*
+ * informes.h
+ *
+ *  Created on: 18 oct. 2021
+ *      Author: mati_
+ */
+
+#ifndef INFORMES_H_
+#define INFORMES_H_
+
+#include "salon.h"
+#include "arcade.h"
+#include "funciones.h"
+#include "juegos.h"
+
+#endif /* INFORMES_H_ */

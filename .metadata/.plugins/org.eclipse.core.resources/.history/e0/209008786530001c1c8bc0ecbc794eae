@@ -1,0 +1,119 @@
+/*
+ ============================================================================
+ Name        : ParcialPrimerCuatri.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "funciones.h"
+#include "salon.h"
+#include "arcade.h"
+#include "juegos.h"
+#include "informes.h"
+#define LEN_SALON 100
+#define LEN_ARCADE 1000
+
+int main(void) {
+
+	setbuf(stdout, NULL);
+	char seguir='s';
+	int opcion;
+	int retornoAdd=1;
+	char opcionInformar[25];
+	Salon lista_salon[LEN_SALON];
+	salon_inicializarArray(lista_salon, LEN_SALON);
+
+	Arcade lista_arcade[LEN_ARCADE];
+	arcade_inicializarArray(lista_arcade, LEN_ARCADE);
+
+	Listajuegos lista_juegos[LEN_SALON];
+
+	salon_altaHardcodeada(lista_salon, "matias", "av la plata", 1, LEN_SALON, 0);
+	salon_altaHardcodeada(lista_salon, "gonzalo", "av belgrano", 2, LEN_SALON, 1);
+	salon_altaHardcodeada(lista_salon, "lucas", "mexico", 2, LEN_SALON, 2);
+	salon_altaHardcodeada(lista_salon, "lia", "salta", 1, LEN_SALON, 3);
+	salon_altaHardcodeada(lista_salon, "mia", "rosario", 2, LEN_SALON, 4);
+	salon_altaHardcodeada(lista_salon, "kira", "venezuela", 1, LEN_SALON, 5);
+
+	arcade_altaHardcodeada(lista_arcade, "DOTA", "argentina", 1, 12, 2, 3, LEN_ARCADE, 0);
+	arcade_altaHardcodeada(lista_arcade, "APEX", "brasil", 2, 7, 4, 5, LEN_ARCADE, 1);
+	arcade_altaHardcodeada(lista_arcade, "HADES", "chile", 1, 2, 5, 6, LEN_ARCADE, 2);
+	arcade_altaHardcodeada(lista_arcade, "CSGO", "españa", 1, 12, 5, 3, LEN_ARCADE, 3);
+	arcade_altaHardcodeada(lista_arcade, "DOOM", "grecia", 1, 12, 5, 3, LEN_ARCADE, 4);
+	arcade_altaHardcodeada(lista_arcade, "DOTA", "argentina", 1, 5, 2, 3, LEN_ARCADE, 5);
+	arcade_altaHardcodeada(lista_arcade, "CSGO", "españa", 1, 12, 5, 3, LEN_ARCADE, 6);
+
+
+
+
+	do{
+			utn_getInt(&opcion, "\n 1-Alta salon\n 2-baja salon \n 3-Imprimir Salon \n 4-Alta arcade\n 5-Modificar Arcade\n 6-Eliminar Arcade \n 7-Imprimir Arcade\n 8-Imprimir Juegos \n 9-Informes \n 10-Salir\n", "error ingrese numeros validos", 1, 11, 8);
+			switch(opcion)
+					{
+					case 1:
+						retornoAdd=salon_alta(lista_salon, LEN_SALON);
+						break;
+					case 2:
+						if(retornoAdd==1)
+							salon_baja(lista_salon, LEN_SALON);
+						else
+							printf("no hay datos cargados \n");
+						break;
+					case 3:
+						salon_mostrarStructura(lista_salon, LEN_SALON);
+						break;
+					case 4:
+						if(retornoAdd==1)
+							{
+							arcade_alta(lista_arcade, LEN_ARCADE, lista_salon, LEN_SALON);
+							}
+						else
+							printf("no hay datos cargados \n");
+						break;
+					case 5:
+							arcade_modificar(lista_arcade, LEN_ARCADE, lista_juegos, LEN_SALON);
+						break;
+
+					case 6:
+						if(retornoAdd==1)
+							{
+								arcade_Baja(lista_arcade, LEN_ARCADE);
+							}
+						else
+							{
+								printf("no hay datos cargados \n");
+							}
+						break;
+					case 7:
+						arcade_mostrarStructura(lista_arcade, LEN_ARCADE);
+						break;
+					case 8:
+						generListaJuegos(lista_juegos, LEN_SALON, lista_arcade, LEN_ARCADE);
+						break;
+					case 9:
+						getString("\n A-Listar salones con 4 arcades \n B-Listar Arcades para mas de dos jugadores \n C-Imprimir Salon \n 4-Alta arcade\n 5-Modificar Arcade\n 6-Eliminar Arcade \n 7-Imprimir Arcade\n 8-Imprimir Juegos \n 9-Informes \n 10-Salir\n",opcionInformar);
+						switch(opcionInformar)
+						{
+							case "A":
+								informe_arcadeMasDeCuatro(lista_salon, LEN_SALON, lista_arcade, LEN_ARCADE);
+								break;
+
+
+
+						}
+
+
+
+						break;
+					case 10:
+						seguir='n';
+						break;
+					}
+		}while(seguir=='s');
+	return EXIT_SUCCESS;
+}

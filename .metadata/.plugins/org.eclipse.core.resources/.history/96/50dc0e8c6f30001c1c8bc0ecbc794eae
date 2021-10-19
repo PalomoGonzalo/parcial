@@ -1,0 +1,130 @@
+/*
+ * informes.c
+ *
+ *  Created on: 18 oct. 2021
+ *      Author: mati_
+ */
+
+#include "informes.h"
+
+
+int verCantidadDeSalonHay(Arcade lista_arcade[],int len_arcade, Salon lista_salon[],int len_salon)
+{
+	int retorno=-1;
+	for (int i=0;i<len_arcade;i++)
+		{
+			for (int j=0;j<len_salon;j++)
+			{
+				if(lista_arcade[i].flagEmpty==OCUPADO&&lista_salon[j].flagEmpty==OCUPADO)
+				{
+					if(lista_arcade[i].idSalon==lista_salon[j].id)
+					{
+						lista_salon[j].cantidadDeJuegos++;
+						retorno=0;
+					}
+				}
+			}
+		}
+	return retorno;
+}
+
+void informe_arcadeMasDeCuatro(Salon lista [],int len_salon,Arcade lista_arcade[],int len_arcade)
+{
+    int i;
+    char auxTipo[38];
+    printf("\nid:\t     nombre:\t   direccion:\t  tipo:\t     cantidad de juego:\t");
+    verCantidadDeSalonHay(lista_arcade, len_arcade, lista, len_salon);
+    for(i=0; i<len_salon; i++)
+    {
+        if(lista[i].flagEmpty==OCUPADO)
+        {
+        	if(lista[i].cantidadDeJuegos>4)
+        	{
+        		salon_reemplazarTipo(lista[i].tipo, auxTipo, sizeof(auxTipo));
+        		printf("\n%2d\t%10s\t%10s\t%10s\t%2d\t",lista[i].id,lista[i].nombre,lista[i].direccion,auxTipo,lista[i].cantidadDeJuegos);
+        	}
+
+
+        }
+    }
+
+}
+void informe_arcadeDosJugadores(Arcade lista[],int len_arcade,Salon lista_salon[],int len_salon)
+{
+		int i;
+	    int indice;
+
+	    printf("\n\nid:\tCtd Jugadores :\t nombre del juego:\tnombre del salon:");
+	    for(i=0; i<len_arcade; i++)
+	    {
+
+	    	salon_buscarId(lista_salon, len_salon, lista[i].idSalon,&indice);
+				if(lista[i].flagEmpty==OCUPADO)
+				{
+					if(lista[i].cantidadDeJugadores>2)
+					{
+
+						printf("\n%d\t%10d\t%10s\t%15s\t",lista[i].id,lista[i].cantidadDeJugadores,lista[i].nombreJuego,lista_salon[indice].nombre);
+					}
+				}
+	    }
+}
+int informe_salonPorId(Salon lista_salon[],int len_salon,Arcade lista_arcade[], int len_arcade)
+{
+	int retorno=-1;
+	int idAux;
+	int opcion;
+	int indice;
+	utn_getInt(&idAux, "\ningrese el id a buscar\n", "error ingrese un numero valido\n", 1, len_salon, 5);
+	opcion=salon_buscarId(lista_salon, len_salon, idAux, &indice);
+	verCantidadDeSalonHay(lista_arcade, len_arcade, lista_salon, len_salon);
+	if(opcion==0)
+	{
+		salon_mostrarUno(lista_salon, indice);
+		retorno=0;
+	}
+	else
+		printf("no existe el id ingresado\n");
+
+	return retorno;
+
+}
+void informe_listarArcadePorId(Arcade lista[],int len_arcade,Salon lista_salon[],int len_salon)
+{
+		int i;
+	    int indice;
+	    salon_buscarId(lista_salon, len_salon, lista[i].idSalon,&indice);
+	    printf("\n\nid:\tCtd Jugadores :\t nombre del juego:\tnombre del salon:");
+	    for(i=0; i<len_arcade; i++)
+	    {
+
+
+				if(lista[i].flagEmpty==OCUPADO)
+					{
+
+					}
+				}
+	    }
+
+void informe_listarUnSoloSalonPoirId(Salon lista[],int indice)
+{
+	char auxTipo[32];
+	salon_reemplazarTipo(lista[indice].tipo, auxTipo, sizeof(auxTipo));
+	printf("NOMBRE: %s TIPO DE SALON: %s\n",lista[indice].nombre,auxTipo);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

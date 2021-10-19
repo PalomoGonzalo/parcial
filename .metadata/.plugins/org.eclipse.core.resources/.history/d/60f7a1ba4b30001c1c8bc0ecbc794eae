@@ -1,0 +1,18 @@
+/*
+ * juegos.h
+ *
+ *  Created on: 18 oct. 2021
+ *      Author: mati_
+ */
+
+#ifndef JUEGOS_H_
+#define JUEGOS_H_
+	typedef struct {
+
+		char nombreJuego[32];// 0 lcd 1 plasma
+		int flagEmpty;
+	}Listajuegos;
+
+
+
+#endif /* JUEGOS_H_ */
