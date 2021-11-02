@@ -368,7 +368,7 @@ char getString(char cadena[],char *retorno)
 		printf(cadena);
 		if(myGets(auxiliarChar, sizeof(auxiliarChar))==0)
 		{
-			while(!esSoloLetras(auxiliarChar))
+			while(!esAlfaNumerico(auxiliarChar))
 			{
 				printf("error ingrese un string valido\n");
 				myGets(auxiliarChar, sizeof(auxiliarChar));

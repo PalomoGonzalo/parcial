@@ -1,29 +1,33 @@
-17:51:19 **** Rebuild of configuration Debug for project ParcialPrimerCuatri ****
+18:01:57 **** Incremental Build of configuration Debug for project ParcialPrimerCuatri ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\salon.o" "..\\src\\salon.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialPrimerCuatri.o" "..\\src\\ParcialPrimerCuatri.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funciones.o" "..\\src\\funciones.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\juegos.o" "..\\src\\juegos.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\arcade.o" "..\\src\\arcade.c" 
 gcc -o ParcialPrimerCuatri.exe "src\\ParcialPrimerCuatri.o" "src\\arcade.o" "src\\funciones.o" "src\\informes.o" "src\\juegos.o" "src\\salon.o" 
-Info: Nothing to build for ParcialPrimerCuatri
-17:53:32 **** Incremental Build of configuration Debug for project ParcialPrimerCuatri ****
+18:10:19 **** Incremental Build of configuration Debug for project ParcialPrimerCuatri ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
 gcc -o ParcialPrimerCuatri.exe "src\\ParcialPrimerCuatri.o" "src\\arcade.o" "src\\funciones.o" "src\\informes.o" "src\\juegos.o" "src\\salon.o" 
 Info: Nothing to build for ParcialPrimerCuatri
-18:00:14 **** Incremental Build of configuration Debug for project ParcialPrimerCuatri ****
+18:12:29 **** Incremental Build of configuration Debug for project ParcialPrimerCuatri ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
 gcc -o ParcialPrimerCuatri.exe "src\\ParcialPrimerCuatri.o" "src\\arcade.o" "src\\funciones.o" "src\\informes.o" "src\\juegos.o" "src\\salon.o" 
-18:02:39 **** Incremental Build of configuration Debug for project ParcialPrimerCuatri ****
+18:14:04 **** Incremental Build of configuration Debug for project ParcialPrimerCuatri ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialPrimerCuatri.o" "..\\src\\ParcialPrimerCuatri.c" 
 gcc -o ParcialPrimerCuatri.exe "src\\ParcialPrimerCuatri.o" "src\\arcade.o" "src\\funciones.o" "src\\informes.o" "src\\juegos.o" "src\\salon.o" 
-18:04:12 **** Incremental Build of configuration Debug for project ParcialPrimerCuatri ****
+18:14:30 **** Incremental Build of configuration Debug for project ParcialPrimerCuatri ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialPrimerCuatri.o" "..\\src\\ParcialPrimerCuatri.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -o ParcialPrimerCuatri.exe "src\\ParcialPrimerCuatri.o" "src\\arcade.o" "src\\funciones.o" "src\\informes.o" "src\\juegos.o" "src\\salon.o" 
+18:14:51 **** Incremental Build of configuration Debug for project ParcialPrimerCuatri ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -o ParcialPrimerCuatri.exe "src\\ParcialPrimerCuatri.o" "src\\arcade.o" "src\\funciones.o" "src\\informes.o" "src\\juegos.o" "src\\salon.o" 
+18:15:27 **** Incremental Build of configuration Debug for project ParcialPrimerCuatri ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -o ParcialPrimerCuatri.exe "src\\ParcialPrimerCuatri.o" "src\\arcade.o" "src\\funciones.o" "src\\informes.o" "src\\juegos.o" "src\\salon.o" 
+18:17:14 **** Incremental Build of configuration Debug for project ParcialPrimerCuatri ****
+Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
 gcc -o ParcialPrimerCuatri.exe "src\\ParcialPrimerCuatri.o" "src\\arcade.o" "src\\funciones.o" "src\\informes.o" "src\\juegos.o" "src\\salon.o" 

@@ -24,9 +24,11 @@ int maxSalon(Salon lista_salon[],int len_salon);
 void informe_Max(Salon lista_salon[], int len_salon, Arcade lista_arcade[], int len_arcade);
 float informe_recaudarPorFicha(Arcade lista_arcade[],int len_arcade,Salon lista_salon[], int len_salon);
 int acumuladorDeFichas(Arcade lista_arcade[],int len_arcade,Salon lista_salon[], int len_salon,int indiceId);
-int informe_juegoContadorArcade(Arcade list[],int len_arcade, char juego[],int *contador);
+int informe_juegoContadorArcade(Arcade list[],int len_arcade, char juego[],int *contador,int *indice);
 void informe_imprimirContadorArcadePorJuego(Listajuegos lista_juegos[],int len_salon, Arcade lista_arcade[],int len_arcade);
 int salon_bajaMenu(Salon lista[],int len,int indice,Arcade lista_arcade[],int len_arcade);
 int salon_baja(Salon lista[],int len,Arcade lista_arcade[],int len_arcade);
 int salonQueTieneArcade(Salon lista_salon[], int len_salon, Arcade lista_arcade[],int len_arcade,int indiceId);
+int informe_SalonCompleto(Arcade lista_arcade[],int len_arcade,Salon lista_salon[],int len_salon,int*indiceRetorno);
+void informe_ImprimirSalonCompleto(Arcade lista_arcade[],int len_arcade,Salon lista_salon[],int len_salon);
 #endif /* INFORMES_H_ */

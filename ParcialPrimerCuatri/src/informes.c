@@ -280,8 +280,9 @@ float informe_recaudarPorFicha(Arcade lista_arcade[],int len_arcade,Salon lista_
 
 	if(salon_buscarId(lista_salon, len_salon, id, &indiceId)==0)
 		{
+		verCantidadDeSalonHay(lista_arcade, len_arcade, lista_salon, len_salon);
 		salon_mostrarUno(lista_salon, indiceId);
-		utn_getFloat(&precio, "\ningrese el id de salon para calcular el monto maximo que se puede generar \n", "error reingrese \n", 1, 99999, 7);
+		utn_getFloat(&precio, "\ningrese el precio por ficha\n", "error reingrese \n", 1, 99999, 7);
 		acumulador=acumuladorDeFichas(lista_arcade, len_arcade, lista_salon, len_salon, indiceId);
 		resultado=(float)acumulador*precio;
 		}
@@ -292,9 +293,9 @@ float informe_recaudarPorFicha(Arcade lista_arcade[],int len_arcade,Salon lista_
 	return resultado;
 
 }
-int informe_juegoContadorArcade(Arcade list[],int len_arcade, char juego[],int *contador)
+int informe_juegoContadorArcade(Arcade list[],int len_arcade, char juego[],int *contador,int *indice)
 {
-	int indice=-1;
+	int retorno=-1;
 	int contadorAux=0;
 	int i;
 	for (i=0;i<len_arcade;i++)
@@ -303,13 +304,14 @@ int informe_juegoContadorArcade(Arcade list[],int len_arcade, char juego[],int *
 		{
 			if(strnicmp(list[i].nombreJuego,juego,32)==0)
 			{
-				indice=0;
+				retorno=0;
 				contadorAux++;
+				*indice=i;
 			}
 		}
 	}
 	*contador=contadorAux;
-	return indice ;
+	return retorno ;
 }
 
 
@@ -317,10 +319,11 @@ void informe_imprimirContadorArcadePorJuego(Listajuegos lista_juegos[],int len_s
 {
 	char juego[32];
 	int cantidadDeJuegos;
+	int indice;
 	generListaJuegos(lista_juegos, len_salon, lista_arcade, len_arcade);
 	juegos_mostrarStructura(lista_juegos, len_salon);
 	getString("INGRESE NOMBRE DEL JUEGO PARA BUSCAR LA CANTIDAD DE ARCADE QUE CONTIENE \n", juego);
-	if(informe_juegoContadorArcade(lista_arcade, len_arcade, juego,&cantidadDeJuegos)==0)
+	if(informe_juegoContadorArcade(lista_arcade, len_arcade, juego,&cantidadDeJuegos,&indice)==0)
 	{
 		printf("ESTE JUEGO LO CONTIENEN %d DE ARCADES\n", cantidadDeJuegos);
 
@@ -331,8 +334,95 @@ void informe_imprimirContadorArcadePorJuego(Listajuegos lista_juegos[],int len_s
 }
 
 
+int informe_SalonCompleto(Arcade lista_arcade[],int len_arcade,Salon lista_salon[],int len_salon,int*indiceRetorno)
+{/*
+		int i;
+	    int indice;
+	    int retorno=-1;
+	    verCantidadDeSalonHay(lista_arcade, len_arcade, lista_salon, len_salon);
+
+	  //  printf("\n\nid:\tCtd Jugadores :\t nombre del juego:\tnombre del salon:");
+	    for(i=0; i<len_salon; i++)
+	    {
+	    	for(int j=0;j<len_arcade;j++)
+	    	{
+	    		if(salon_buscarId(lista_salon, len_salon, lista_arcade[j].idSalon,&indice)==0)
+	    		{
+	    			if(lista_arcade[j].flagEmpty==OCUPADO&&lista_salon[i].flagEmpty==OCUPADO)
+	    							{
+	    								if(lista_salon[indice].cantidadDeJuegos>8)
+	    								{
+	    									if(lista_arcade[i].cantidadDeJugadores>2)
+	    									{
+	    										retorno=0;
+	    										*indiceRetorno=indice;
+	    										break;
+	    									}
+
+	    								}
+	    				    	}
+
+	    		}
 
 
+	    	}
+	    	}
+	    return retorno;
+	    */
+
+	int estado = -1;
+	int i;
+	int j;
+	int contador=0;
+
+	if(lista_arcade!=NULL && lista_salon!=NULL && len_arcade>0 && len_salon>0)
+	{
+		for(i=0;i<len_salon;i++)
+		{
+
+			if(lista_salon[i].flagEmpty==OCUPADO)
+			{
+				for(j=0;j<len_arcade;j++)
+				{
+					if(lista_salon[j].flagEmpty==OCUPADO)
+					{
+
+						if(lista_salon[i].id==lista_arcade[j].idSalon)// && lista_arcade[j].cantidadDeJugadores>2)
+						{
+							printf("sad");
+							contador++;
+						}
+					}
+				}
+					if(contador>=8)
+					{
+						salon_mostrarUno(lista_salon, i);
+					}
+				contador=0;
+			}
+		}
+	estado=0;
+	}
+
+return estado;
+}
+void informe_ImprimirSalonCompleto(Arcade lista_arcade[],int len_arcade,Salon lista_salon[],int len_salon)
+{
+	int indice;
+
+	for(int i=0;i<len_salon;i++)
+	{
+		if(informe_SalonCompleto(lista_arcade, len_arcade, lista_salon, len_salon,&indice)==0)
+		{
+
+			salon_mostrarUno(lista_salon, indice);
+
+		}
+	}
+
+
+
+}
 
 
 

@@ -207,7 +207,7 @@ int generListaJuegos(Listajuegos lista_juegos[],int len_juegos,Arcade lista_arca
 	juegos_init(lista_juegos, len_juegos);
 	for(i=0;i<len_arcade;i++)
 	{
-		if(lista_arcade[i].flagEmpty==OCUPADO)
+		if(lista_arcade[i].flagEmpty==0)
 		{
 			if(juegos_estaEnArcade(lista_juegos, len_juegos, lista_arcade[i].nombreJuego)==0)
 			{
@@ -228,12 +228,9 @@ void juegos_mostrarStructura(Listajuegos lista [],int len)
 	    printf("\nJUEGOS CARGADOS \n");
 	    for(i=0; i<len; i++)
 	    {
-	        if(lista[i].flagEmpty==OCUPADO)
+	        if(lista[i].flagEmpty==0)
 	        {
-
 	        	printf("%s\n",lista[i].nombreJuego);
-
-
 	        }
 	    }
 
