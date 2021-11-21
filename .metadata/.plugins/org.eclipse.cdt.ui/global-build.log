@@ -1,77 +1,22 @@
-22:31:52 **** Rebuild of configuration Debug for project SegundoParcialPrimerCuatri ****
+01:36:57 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\arcade.o" "..\\src\\arcade.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funciones.o" "..\\src\\funciones.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\SegundoParcialPrimerCuatri.o" "..\\src\\SegundoParcialPrimerCuatri.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
 gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\parser.o" 
 Info: Nothing to build for SegundoParcialPrimerCuatri
-22:34:05 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
+01:37:32 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\funciones.o" "..\\src\\funciones.c" 
-gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\parser.o" 
-22:36:53 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\SegundoParcialPrimerCuatri.o" "..\\src\\SegundoParcialPrimerCuatri.c" 
 gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\parser.o" 
 c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file SegundoParcialPrimerCuatri.exe: Permission denied
 collect2.exe: error: ld returned 1 exit status
-22:36:57 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
+01:37:36 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
 Info: Internal Builder is used for build
 gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\parser.o" 
-22:39:30 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
+01:38:11 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\parser.o" 
-22:41:08 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\arcade.o" "..\\src\\arcade.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\SegundoParcialPrimerCuatri.o" "..\\src\\SegundoParcialPrimerCuatri.c" 
 gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\parser.o" 
 c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file SegundoParcialPrimerCuatri.exe: Permission denied
 collect2.exe: error: ld returned 1 exit status
-22:41:13 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
+01:38:15 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
 Info: Internal Builder is used for build
-gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\parser.o" 
-22:41:36 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\parser.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file SegundoParcialPrimerCuatri.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-22:41:40 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
-Info: Internal Builder is used for build
-gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\parser.o" 
-22:43:50 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\parser.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file SegundoParcialPrimerCuatri.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-22:43:54 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
-Info: Internal Builder is used for build
-gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\parser.o" 
-22:47:19 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\parser.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file SegundoParcialPrimerCuatri.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-22:47:22 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
-Info: Internal Builder is used for build
-gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\parser.o" 
-22:50:13 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\arcade.o" "..\\src\\arcade.c" 
-gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\parser.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file SegundoParcialPrimerCuatri.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-22:50:17 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
-Info: Internal Builder is used for build
-gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\parser.o" 
-22:50:53 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
 gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\parser.o" 

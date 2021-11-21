@@ -72,7 +72,25 @@ int controller_List(LinkedList* pArrayList)
    return 1;
 }
 
+int controller_listJuegos(LinkedList* pArrayList)
+{
+	char juegos[MAX_LEN];
+	Arcade* pAux;
+	int id;
+	if(pArrayList!=NULL)
+	{
+		puts("LISTA DE JUEGOS NO REPETIDOS\n");
+		for(int i=0;i<ll_len(pArrayList);i++)
+		{
+			pAux=ll_get(pArrayList, i);
+			arcade_getNombreJuego(pAux, juegos);
+			arcade_getId(pAux, &id);
+			printf(" %s\n %d \n",juegos,id);
 
+		}
+	}
+	return 1;
+}
 int controller_listOne(LinkedList* pArrayList,int indice)
 {
 	Arcade * pAux;
@@ -118,7 +136,7 @@ int arcade_findById(LinkedList* pArray,int id, int* indiceDeId)
 			pAux=ll_get(pArray, i);
 			if(pAux!=NULL)
 			{
-				employee_getId(pAux, &idAux);
+				arcade_getId(pAux, &idAux);
 				if(idAux==id)
 				{
 					*indiceDeId=i;
@@ -171,7 +189,7 @@ int controller_add(LinkedList* pList)
 
 
 
-int controller_editArcade(LinkedList* pArray)
+/*int controller_editArcade(LinkedList* pArray)
 {
 	int retorno=-1;
 	Arcade* pAux=NULL;
@@ -237,26 +255,146 @@ int controller_menuEditEmployee(Arcade* pAux,LinkedList* pArray,int indiceId)
 
 	return 1;
 }
+*/
 
 
 
 
+/*LinkedList* filtrarJuegos(LinkedList* pLista)
+{
+	LinkedList* listAux;
+	listAux=ll_newLinkedList();
+	listAux=ll_clone(pLista);
+	Arcade * pAux;
+	char nombre[MAX_LEN];
+
+	for(int i=0;i<ll_len(pLista);i++)
+	{
+
+		pAux=(Arcade*)ll_get(listAux, i);
+	//	jAux=ll_get(listAux,i+1);
+		arcade_getNombreJuego(pAux, nombre);
+
+		if(existeJuegosRepetidos(listAux, nombre)==1)
+		{
+			puts("entre");
+			ll_remove(listAux, i);
+
+		}
+
+
+	}
+return listAux;
+
+}
+*/
+
+
+/*int existeJuegosRepetidos(LinkedList * pList,char* pArc)
+{
+	Arcade* aux;
+
+	int retorno=-1;
+	char nombre[MAX_LEN];
+	if(pList!=NULL&&pArc!=NULL)
+	{
+
+		for(int i=0;i<ll_len(pList);i++)
+		{
+			aux=(Arcade*)ll_get(pList, i);
+			arcade_getNombreJuego(aux, nombre);
+
+			if(aux!=NULL)
+			{
+				if(strnicmp(nombre,pArc,MAX_LEN)==0)
+				{
+
+					retorno=1;
+					break;
+				}
+
+			}
+
+		}
+
+
+	}
+	return retorno;
 
 
 
+}
+*/
+
+int controller_deleteArcade(LinkedList* list)
+{
+	Arcade *pArc=NULL;
+	int id;
+	int existeId;
+	int indiceId;
+	if(list!=NULL)
+	{
+		controller_List(list);
+		utn_getInt(&id, "\nIngrese el id que desea borrar", "error reingrese un id valido \n", 1, 111111, 4);
+		existeId=arcade_findById(list, id, &indiceId);
+		if(existeId==1)
+		{
+			controller_menuRemoveArcade(list, pArc, indiceId);
+		}
+		else
+		{
+			printf("no existe el id \n");
+		}
+
+	}
 
 
+    return 1;
+}
+int controller_menuRemoveArcade(LinkedList* pList,Arcade* pArc,int indiceId)
+{
+	int opcion;
+	utn_getInt(&opcion, "\nEsta seguro que desea borrar este arcade\n1-Para eliminar\n2-Para cancelar\n", "Error ingrese numeros validos\n", 1, 2, 4);
+	if(opcion==1)
+	{
+
+		if(pList!=NULL)
+		{
+			pArc=ll_get(pList, indiceId);
+			ll_remove(pList, indiceId);
+			arcade_delete(pArc);
+			printf("se dio de baja\n");
+		}
+	}
+	else
+	{
+		printf("la operacion se cancelo \n");
+	}
+	return 1;
+}
+
+int ordenarPorNombre(void* arcadeA, void* arcadeB)
+{
+    int retorno = 0;
+    Arcade* empA=(Arcade*) arcadeA;
+    Arcade* empB=(Arcade*) arcadeB;
+    if(arcadeA !=NULL && arcadeB !=NULL)
+    {
+        retorno = stricmp(empB->nombreJuego, empA->nombreJuego);
+    }
+    return retorno;
+}
 
 
+int controller_sortArcade(LinkedList* pArrayListEmployee)
+{
+	if(pArrayListEmployee!=NULL)
+	{
+		ll_sort(pArrayListEmployee, ordenarPorNombre, 1);
 
-
-
-
-
-
-
-
-
+	}
+    return 1;
+}
 
 
 
