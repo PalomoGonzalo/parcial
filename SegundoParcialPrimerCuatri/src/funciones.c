@@ -403,7 +403,24 @@ char getString(char cadena[],char *retorno)
 		return *retorno;
 }
 
+char getStringAlfa(char cadena[],char *retorno)
+{
 
+
+	char auxiliarChar[500];
+		printf(cadena);
+		if(myGets(auxiliarChar, sizeof(auxiliarChar))==0)
+		{
+			while(!esAlfaNumerico(auxiliarChar))
+			{
+				printf("error ingrese un mail valido");
+				myGets(auxiliarChar, sizeof(auxiliarChar));
+			}
+		}
+		strcpy(retorno,auxiliarChar);
+
+		return *retorno;
+}
 int esTelefono(char str[])
 {
    int i=0;

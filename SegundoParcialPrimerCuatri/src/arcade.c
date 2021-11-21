@@ -12,7 +12,7 @@
 #include "funciones.h"
 #include "LinkedList.h"
 
-//#define NOMBRE_LEN 32
+
 
 
 Arcade* arcade_new()
@@ -169,7 +169,7 @@ int arcade_setNacionalidad(Arcade* this,char* nombre)
 	int retorno=-1;
 	if(this!=NULL && nombre!=NULL)
 	{
-		if(validar_palabra(nombre))
+		if(esSoloLetras(nombre))
 		{
 			retorno=1;
 			strncpy(this->nacionalidad,nombre,MAX_LEN);
@@ -304,12 +304,22 @@ int arcade_getCantidadDeJugadores(Arcade* this,int* jugadores)
 int arcade_setTipoDeSonidoTxt(Arcade* this, char* txt)
 {
     int retorno = -1;
+    int tipo;
     if(this != NULL && txt!=NULL)
-        if(esNumerico(txt))
+    {
+        if(strnicmp("MONO",txt,MAX_LEN)==0)
         {
-        	retorno=1;
-           this->tipoDeSonido=atoi(txt);
-        }
+        	tipo=2;
+           this->tipoDeSonido=tipo;
+           retorno=1;
+		}
+		if(strnicmp("STEREO",txt,MAX_LEN)==0)
+		{
+			tipo=1;
+		   this->tipoDeSonido=tipo;
+		   retorno=1;
+		}
+    }
     return retorno;
 }
 
@@ -413,12 +423,12 @@ int controller_nextId(LinkedList* pArrayList)
 }
 char arcade_reemplazarTipo(int tipo,char *retorno,int len)
 {
-	char aux[20];
+	char aux[MAX_LEN];
 
 	switch(tipo)
 	{
 	case 1:
-		strncpy(aux,"ESTEREO",sizeof(aux));
+		strncpy(aux,"STEREO",sizeof(aux));
 		break;
 	case 2:
 		strncpy(aux,"MONO",sizeof(aux));

@@ -8,7 +8,7 @@
 #ifndef ARCADE_H_
 #define ARCADE_H_
 
-#define MAX_LEN 32
+#define MAX_LEN 64
 #define MONO 1
 #define STEREO 2
 #include "LinkedList.h"

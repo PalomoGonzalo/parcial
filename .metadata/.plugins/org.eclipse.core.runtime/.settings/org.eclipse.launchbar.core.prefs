@@ -1,8 +1,9 @@
 LaunchTargetManager/configs/ParcialPrimerCuatri.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/SegundoParcialPrimerCuatri.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:ParcialPrimerCuatri.exe
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:ParcialPrimerCuatri.exe,org.eclipse.launchbar.core.descriptorType.default\:SegundoParcialPrimerCuatri.exe
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:ParcialPrimerCuatri.exe/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:ParcialPrimerCuatri.exe/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

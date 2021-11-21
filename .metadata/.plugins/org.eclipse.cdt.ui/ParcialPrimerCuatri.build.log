@@ -1,7 +1,5 @@
-18:17:14 **** Incremental Build of configuration Debug for project ParcialPrimerCuatri ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
-gcc -o ParcialPrimerCuatri.exe "src\\ParcialPrimerCuatri.o" "src\\arcade.o" "src\\funciones.o" "src\\informes.o" "src\\juegos.o" "src\\salon.o" 
+16:33:28 **** Clean-only build of configuration Debug for project ParcialPrimerCuatri ****
+rm -rf src/juegos.d src/salon.d src/salon.o src/juegos.o src/informes.d src/ParcialPrimerCuatri.d src/informes.o src/arcade.d src/ParcialPrimerCuatri.o ParcialPrimerCuatri.exe src/funciones.d src/funciones.o src/arcade.o 
 
-18:17:15 Build Finished. 0 errors, 0 warnings. (took 543ms)
+16:33:28 Build Finished. 0 errors, 0 warnings. (took 405ms)
 

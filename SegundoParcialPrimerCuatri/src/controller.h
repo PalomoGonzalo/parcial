@@ -10,5 +10,6 @@
 
 int controller_loadFromText(char* path , LinkedList* pArrayList);
 int controller_List(LinkedList* pArrayList);
-int list(LinkedList* list);
+int controller_listOne(LinkedList* pArrayList,int indice);
+int controller_add(LinkedList* pList);
 #endif /* CONTROLLER_H_ */

@@ -38,6 +38,7 @@ int esNumericoFlotante(char str[]);
 float utn_getFloat(float* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos);
 char getIntString(char cadena[],char *retorno);
 int validar_palabra(char palabra[]);
+char getStringAlfa(char cadena[],char *retorno);
 
 //int getString(char cadena[],char *retorno[]);
 

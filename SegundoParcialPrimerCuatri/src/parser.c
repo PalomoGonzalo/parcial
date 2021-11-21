@@ -41,7 +41,7 @@ int parser_arcadeFromText(FILE* pFile , LinkedList* pArrayList)
 
 				pArcadeAux = arcade_newParametros(id, tipoDeSonido, fichasMaximas, cantidadDeJugadores, nacionalidad, nombreJuego, salonName, pArrayList, &flag);
 
-				if(pArcadeAux!=NULL)
+				if(pArcadeAux!=NULL&&flag==1)
 				{
 
 					retorno=1;
