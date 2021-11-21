@@ -11,6 +11,7 @@
 #include "parser.h"
 #include "Controller.h"
 #include "funciones.h"
+#include "juegos.h"
 
 
 int controller_loadFromText(char* path , LinkedList* pArrayList)
@@ -75,17 +76,17 @@ int controller_List(LinkedList* pArrayList)
 int controller_listJuegos(LinkedList* pArrayList)
 {
 	char juegos[MAX_LEN];
-	Arcade* pAux;
-	int id;
+	Juegos* pAux;
+
 	if(pArrayList!=NULL)
 	{
 		puts("LISTA DE JUEGOS NO REPETIDOS\n");
 		for(int i=0;i<ll_len(pArrayList);i++)
 		{
 			pAux=ll_get(pArrayList, i);
-			arcade_getNombreJuego(pAux, juegos);
-			arcade_getId(pAux, &id);
-			printf(" %s\n %d \n",juegos,id);
+			juegos_getNombreJuego(pAux, juegos);
+
+			printf("%s\n",juegos);
 
 		}
 	}
@@ -260,71 +261,27 @@ int controller_menuEditEmployee(Arcade* pAux,LinkedList* pArray,int indiceId)
 
 
 
-/*LinkedList* filtrarJuegos(LinkedList* pLista)
+LinkedList* filtrarJuegos(LinkedList* pLista)
 {
 	LinkedList* listAux;
 	listAux=ll_newLinkedList();
-	listAux=ll_clone(pLista);
-	Arcade * pAux;
-	char nombre[MAX_LEN];
 
+	Arcade * pAux;
+	Juegos* pJuegos;
+	char nombre[MAX_LEN];
 	for(int i=0;i<ll_len(pLista);i++)
 	{
-
-		pAux=(Arcade*)ll_get(listAux, i);
-	//	jAux=ll_get(listAux,i+1);
+		pAux=(Arcade*)ll_get(pLista, i);
 		arcade_getNombreJuego(pAux, nombre);
-
-		if(existeJuegosRepetidos(listAux, nombre)==1)
+		if(existeJuegosRepetidos(listAux, nombre)==0)
 		{
-			puts("entre");
-			ll_remove(listAux, i);
-
+			pJuegos=new_juegosParametros(nombre);
+			ll_add(listAux, pJuegos);
 		}
-
-
 	}
 return listAux;
 
 }
-*/
-
-
-/*int existeJuegosRepetidos(LinkedList * pList,char* pArc)
-{
-	Arcade* aux;
-
-	int retorno=-1;
-	char nombre[MAX_LEN];
-	if(pList!=NULL&&pArc!=NULL)
-	{
-
-		for(int i=0;i<ll_len(pList);i++)
-		{
-			aux=(Arcade*)ll_get(pList, i);
-			arcade_getNombreJuego(aux, nombre);
-
-			if(aux!=NULL)
-			{
-				if(strnicmp(nombre,pArc,MAX_LEN)==0)
-				{
-
-					retorno=1;
-					break;
-				}
-
-			}
-
-		}
-
-
-	}
-	return retorno;
-
-
-
-}
-*/
 
 int controller_deleteArcade(LinkedList* list)
 {

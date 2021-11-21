@@ -21,12 +21,13 @@ int main(void) {
 
 	LinkedList* listaArcade=ll_newLinkedList();
 
-	//LinkedList* juegos=ll_newLinkedList();
+	LinkedList* juegos=ll_newLinkedList();
 
 
 	controller_loadFromText("arcades.csv", listaArcade);
 	LinkedList* listaParaOrdenar=ll_newLinkedList();
 	listaParaOrdenar=ll_clone(listaArcade);
+	juegos=filtrarJuegos(listaArcade);
 	int option=0;
 
 	do{
@@ -58,13 +59,11 @@ int main(void) {
 	            	controller_sortArcade(listaParaOrdenar);
 	            	controller_List(listaParaOrdenar);
 	            	break;
-	            	 /*    case 5:
-	            	if(ll_isEmpty(listaArcade)==0)
-	            		controller_removeEmployee(listaArcade);
-	            	else
-	            		printf("error cargue algo a la lista \n");
+	            case 5:
+
+	            	controller_listJuegos(juegos);
 	            	break;
-	            case 6:
+	          /*  case 6:
 	            	if(ll_isEmpty(listaArcade)==0)
 	            	{
 	            	 controller_ListEmployee(listaArcade);

@@ -15,7 +15,7 @@ int controller_listOne(LinkedList* pArrayList,int indice);
 int controller_add(LinkedList* pList);
 LinkedList* filtrarJuegos(LinkedList* pLista);
 int controller_listJuegos(LinkedList* pArrayList);
-int existeJuegosRepetidos(LinkedList * pList,char* pArc);
+
 int controller_menuRemoveArcade(LinkedList* pList,Arcade* pArc,int indiceId);
 int controller_deleteArcade(LinkedList* list);
 int ordenarPorNombre(void* arcadeA, void* arcadeB);

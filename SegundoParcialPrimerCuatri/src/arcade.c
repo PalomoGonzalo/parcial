@@ -17,8 +17,8 @@
 
 Arcade* arcade_new()
 {
-	Arcade* pEmployee= malloc(sizeof(Arcade));
-	return pEmployee;
+	Arcade* pArc= malloc(sizeof(Arcade));
+	return pArc;
 
 }
 
