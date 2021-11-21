@@ -190,7 +190,7 @@ int controller_add(LinkedList* pList)
 
 
 
-/*int controller_editArcade(LinkedList* pArray)
+int controller_editArcade(LinkedList* pArray, LinkedList* pJuegos)
 {
 	int retorno=-1;
 	Arcade* pAux=NULL;
@@ -202,12 +202,12 @@ int controller_add(LinkedList* pList)
 	{
 		controller_List(pArray);
 		utn_getInt(&id, "\ningrese el id que desea modificar\n", "Error reingrese un numero valido \n", 1, 111111, 3);
-		existeId=employee_findById(pArray, id, &indiceId);
+		existeId=arcade_findById(pArray, id, &indiceId);
 		if(existeId==1)
 		{
 			printf("\neste es el arcade que va a modificar\n");
 			controller_listOne(pArray, indiceId);
-			controller_menuEditArcade(pAux, pArray, indiceId);
+			controller_menuEditArcade(pAux, pArray, indiceId, pJuegos);
 			printf("\nse modifico correctamente\n");
 		}
 		else
@@ -223,31 +223,27 @@ int controller_add(LinkedList* pList)
     return retorno;
 }
 
-int controller_menuEditEmployee(Arcade* pAux,LinkedList* pArray,int indiceId)
+int controller_menuEditArcade(Arcade* pAux,LinkedList* pArray,int indiceId,LinkedList* pJuegos)
 {
 	int opcion;
 	char auxNombre[32];
-			 int auxHoras;
-	int sueldoAux;
+	int cantJug;
 	printf("\nQue desea modificar\n");
-	puts("\n1- NOMBRE\n2- Horas Trabajadas\n3- Sueldo\n4- Salir\n ");
+	puts("\n1-CANTIDAD DE JUGADORES \n2-NOMBRE DEL JUEGO\n3-Salir\n ");
 	utn_getInt(&opcion, "\ningrese una opcion\n", "error reingrese numeros validos \n", 1, 4, 4);
 	pAux=ll_get(pArray, indiceId);
 	switch(opcion)
 	{
 	case 1:
-		getString("ingrese el nuevo nombre\n", auxNombre);
-		employee_setNombre(pAux, auxNombre);
+		utn_getInt(&cantJug, "ingrese la nueva cantidad de jugadores \n", "Error ingrese un numero valido", 1, 999, 4);
+		arcade_setCantidadDeJugadores(pAux, cantJug);
 		break;
 	case 2:
-		utn_getInt(&auxHoras, "ingrese las nuevas horas trabajadas\n", "Error ingrese un numero valido", 1, 999, 4);
-		employee_setHorasTrabajadas(pAux, auxHoras);
+		controller_listJuegos(pJuegos);
+		getStringAlfa("ingrese nuevo nombre de juego\n", auxNombre);
+		arcade_setNombreJuego(pAux, auxNombre);
 		break;
 	case 3:
-		utn_getInt(&sueldoAux, "ingrese su nuevo sueldo\n", "Error ingrese un numero valido", 1, 9999999, 4);
-		employee_setSueldo(pAux, sueldoAux);
-		break;
-	case 4:
 		break;
 
 	}
@@ -256,7 +252,7 @@ int controller_menuEditEmployee(Arcade* pAux,LinkedList* pArray,int indiceId)
 
 	return 1;
 }
-*/
+
 
 
 
@@ -353,15 +349,92 @@ int controller_sortArcade(LinkedList* pArrayListEmployee)
     return 1;
 }
 
+int controller_saveAsText(char* path , LinkedList* pArray)
+{
+    FILE* pArchivo;
+    Arcade* pArcade;
+    int retorno = -1;
+    char game[MAX_LEN];
+    int id;
+    int tipoSonido;
+    int cantJugadores;
+    int fichasMax;
+    char nacionalidad[MAX_LEN];
+    char salonName[MAX_LEN];
+
+    pArchivo = fopen(path, "w");
+    if(pArchivo != NULL && pArray != NULL)
+    {
+        rewind(pArchivo);
+        fprintf(pArchivo, "id,nacionalidad,tipo_sonido,cant_jug,fichas_max,salon,game\n");
+        for(int i=0; i<ll_len(pArray); i++)
+        {
+        	pArcade = (Arcade*)ll_get(pArray, i);
+            arcade_getId(pArcade, &id);
+            arcade_getNacionalidad(pArcade, nacionalidad);
+            arcade_getTipoDeSonido(pArcade, &tipoSonido);
+            arcade_getCantidadDeJugadores(pArcade, &cantJugadores);
+            arcade_getFichasMaximas(pArcade, &fichasMax);
+            arcade_getSalonName(pArcade, salonName);
+            arcade_getNombreJuego(pArcade, game);
+            fprintf(pArchivo, "%d,%s,%d,%d,%d,%s,%s\n", id, nacionalidad, tipoSonido, cantJugadores,fichasMax,salonName,game);
+        }
+        printf("\n --> Datos guardados con exito.\n\n");
+        retorno = 0;
+    }
+    fclose(pArchivo);
+    return retorno;
+}
 
 
 
+int controller_saveAsTextJuegos(char* path , LinkedList* pArray)
+{
+    FILE* pArchivo;
+    Juegos* pJuegos;
+    int retorno = -1;
+    char game[MAX_LEN];
+    pArchivo = fopen(path, "w");
+    if(pArchivo != NULL && pArray != NULL)
+    {
+    	rewind(pArchivo);// PRIMERA POSICION
+        fprintf(pArchivo, "LISTA DE JUEGOS SIN REPETIR\n");
+        for(int i=0; i<ll_len(pArray); i++)
+        {
+        	pJuegos = (Juegos*)ll_get(pArray, i);
+        	juegos_getNombreJuego(pJuegos, game);
+            fprintf(pArchivo, "%s\n" ,game);
+        }
+        printf("\n --> Datos guardados con exito.\n\n");
+        retorno = 0;
+    }
+    fclose(pArchivo);
+    return retorno;
+}
 
 
 
+int controller_filtrarJugadores(void *a)
+{
+	int retorno=0;
+	if(((Arcade*)a)->cantidadDeJugadores>4)
+	{
+		retorno=1;
+	}
+
+	return retorno;
+}
+
+int controller_actualizarFichas(void *a)
+{
+	int nuevasFichas;
+	arcade_getFichasMaximas((Arcade*)a, &nuevasFichas);
+
+	arcade_setFichasMaximas((Arcade*)a,nuevasFichas*2 );
 
 
-
+	return 1;
+}
 
 
 

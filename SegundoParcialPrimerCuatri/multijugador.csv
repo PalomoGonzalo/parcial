@@ -1,0 +1,187 @@
+id,nacionalidad,tipo_sonido,cant_jug,fichas_max,salon,game
+3,Philippines,1,5,414,Salon Carreras,Bubble Bobble
+5,China,1,5,443,Salon 3,Tetris
+9,Russia,2,5,498,Salon 2021,Out Run
+11,China,2,4,278,Salon Carreras,Space Invaders
+13,Philippines,2,5,124,Salon Retro,Tron
+24,Sri Lanka,1,5,333,Salon 1,Virtua Cop
+29,Mauritius,1,4,393,Salon 1,Double Dragon
+30,France,2,4,480,Salon 1,Asteroids
+34,Russia,1,5,301,Salon 6,Pacman
+35,Indonesia,1,4,207,Salon Retro,Street Fighter II
+36,Indonesia,1,5,469,Salon 2021,Asteroids
+37,Indonesia,1,5,239,Salon Retro,Pong
+40,Greece,2,5,223,Salon 4,Pong
+41,Ireland,2,4,420,Salon Carreras,Pong
+43,Philippines,1,5,496,Salon 5,Metal Slug
+44,Russia,2,5,151,Salon Carreras,Tetris
+46,China,1,4,456,Salon 5,Star Wars
+50,Portugal,2,4,294,Salon 3,Bubble Bobble
+53,Indonesia,1,4,442,Salon 3,Mortal Kombat
+59,Philippines,1,4,303,Salon Carreras,Tetris
+62,China,1,5,454,Salon 1,Pacman
+65,Indonesia,2,4,260,Salon 1,Castelvania
+69,Russia,2,5,113,Salon 1,Tron
+70,Albania,1,4,376,Salon VR,Galaga
+71,Micronesia,1,5,415,Salon VR,Out Run
+73,China,2,4,167,Salon 2,Asteroids
+76,China,1,4,141,Salon 2021,Out Run
+79,China,2,4,360,Salon 6,Pacman
+80,Czech Republic,2,4,385,Salon Carreras,Castelvania
+82,New Zealand,1,4,206,Salon 6,Virtua Cop
+84,Honduras,2,5,389,Salon 3,Star Wars
+91,Indonesia,1,4,433,Salon Retro,Street Fighter II
+94,China,1,5,442,Salon Retro,Bubble Bobble
+99,Philippines,1,4,274,Salon Retro,Bubble Bobble
+100,China,1,5,213,Salon 3,Street Fighter II
+101,Estonia,2,4,215,Salon 3,Virtua Cop
+107,Mexico,1,4,472,Salon 5,Pong
+110,Indonesia,1,4,239,Salon 1,Metal Slug
+112,China,1,5,444,Salon Retro,Space Invaders
+114,Chile,1,5,282,Salon 6,Castelvania
+117,Japan,2,5,487,Salon Carreras,Tron
+119,China,1,5,474,Salon 2021,Out Run
+120,Mexico,1,5,335,Salon VR,Pacman
+123,Nigeria,1,5,390,Salon Retro,Frogger
+126,Bolivia,2,5,391,Salon 2021,Castelvania
+128,China,1,5,458,Salon 6,Metal Slug
+137,France,2,4,289,Salon 6,Out Run
+138,Indonesia,2,4,151,Salon 3,Out Run
+140,Armenia,1,4,396,Salon 1,Mortal Kombat
+142,France,2,5,494,Salon 2021,Frogger
+143,China,2,5,333,Salon 2021,Mortal Kombat
+145,Russia,2,5,354,Salon 3,Street Fighter II
+146,Slovenia,2,5,177,Salon 3,Pong
+151,Thailand,2,4,109,Salon 5,Tetris
+156,Nepal,2,5,217,Salon 2021,Frogger
+160,Malaysia,1,5,442,Salon 2,Galaga
+164,China,1,4,372,Salon 3,Tetris
+165,Venezuela,1,5,198,Salon 5,Asteroids
+169,Philippines,1,5,188,Salon 4,Out Run
+171,Paraguay,2,5,311,Salon 2,Metal Slug
+172,China,2,4,416,Salon 2,Street Fighter II
+174,South Africa,1,5,378,Salon VR,Bubble Bobble
+175,Poland,2,5,135,Salon VR,Metal Slug
+177,French Guiana,1,4,184,Salon 1,Pacman
+181,United States,2,5,356,Salon 1,Mortal Kombat
+188,Sweden,2,5,449,Salon Carreras,Arkanoid
+189,Ukraine,2,4,133,Salon 2021,Space Invaders
+191,Zimbabwe,1,5,459,Salon 3,Out Run
+196,Iran,2,5,194,Salon 3,Pacman
+198,Panama,1,4,283,Salon Retro,Castelvania
+199,Panama,1,5,243,Salon 2,Metal Slug
+203,France,1,4,205,Salon 2021,Mortal Kombat
+206,United States,1,5,317,Salon 6,Bubble Bobble
+207,China,2,4,455,Salon 5,Out Run
+210,Mongolia,2,5,360,Salon VR,Tron
+214,Indonesia,2,5,494,Salon VR,Double Dragon
+218,Russia,2,5,252,Salon 1,Mortal Kombat
+225,China,2,4,165,Salon 1,Metal Slug
+226,Philippines,2,4,408,Salon Retro,Metal Slug
+227,Russia,1,5,341,Salon 1,Mortal Kombat
+233,Azerbaijan,1,5,209,Salon 3,Pong
+235,China,2,4,336,Salon Retro,Space Invaders
+236,Bulgaria,2,4,471,Salon VR,Virtua Cop
+242,Indonesia,1,4,462,Salon 2,Bubble Bobble
+244,China,1,4,175,Salon 6,Pong
+247,Iran,2,5,477,Salon Carreras,Galaga
+248,United States,2,4,304,Salon 1,Castelvania
+252,China,2,5,408,Salon 4,Space Invaders
+253,China,2,5,330,Salon 1,Virtua Cop
+254,China,1,5,211,Salon 1,Bubble Bobble
+261,Ireland,1,4,475,Salon 1,Metal Slug
+262,Nigeria,2,4,282,Salon 2021,Arkanoid
+272,China,1,4,241,Salon Carreras,Star Wars
+273,China,2,5,171,Salon 1,Tron
+277,Peru,2,5,490,Salon 5,Star Wars
+281,Greece,2,5,238,Salon 4,Bubble Bobble
+282,Malaysia,2,4,421,Salon 1,Virtua Cop
+286,Poland,1,4,239,Salon 5,Asteroids
+288,Palestinian Territory,1,4,412,Salon Retro,Out Run
+292,China,2,4,154,Salon VR,Frogger
+294,Indonesia,1,4,463,Salon Carreras,Tron
+295,Argentina,2,5,343,Salon 5,Street Fighter II
+303,Mexico,1,5,197,Salon 3,Frogger
+305,France,1,5,267,Salon 6,Bubble Bobble
+306,Nicaragua,1,5,122,Salon 2,Galaga
+311,Finland,1,5,135,Salon 5,Out Run
+321,Indonesia,1,4,404,Salon 3,Tetris
+322,Greece,2,5,143,Salon VR,Castelvania
+323,China,1,5,475,Salon 2021,Mortal Kombat
+324,Namibia,1,4,208,Salon 2,Tron
+330,Philippines,2,4,312,Salon 2021,Star Wars
+331,China,1,5,330,Salon Carreras,Asteroids
+333,China,2,4,311,Salon 2021,Out Run
+341,Russia,1,4,229,Salon VR,Arkanoid
+346,Malaysia,1,4,401,Salon VR,Galaga
+353,Japan,2,5,184,Salon 4,Arkanoid
+355,Portugal,2,4,174,Salon 2,Frogger
+356,Germany,2,5,499,Salon VR,Pong
+358,Costa Rica,1,4,483,Salon Carreras,Virtua Cop
+359,Ireland,2,4,334,Salon VR,Tron
+360,China,1,4,238,Salon VR,Pong
+361,China,1,5,351,Salon 4,Pacman
+365,Ethiopia,1,4,488,Salon 2021,Bubble Bobble
+368,China,2,5,154,Salon 4,Metal Slug
+369,United Kingdom,1,4,202,Salon Carreras,Arkanoid
+370,Kosovo,2,4,331,Salon 4,Tetris
+372,Russia,1,4,221,Salon Retro,Bubble Bobble
+374,Saudi Arabia,1,5,226,Salon 4,Star Wars
+376,Martinique,1,5,387,Salon 4,Double Dragon
+379,Canada,2,4,100,Salon 2,Galaga
+383,Indonesia,2,5,456,Salon VR,Double Dragon
+386,Iran,1,4,120,Salon 6,Street Fighter II
+389,Indonesia,1,4,147,Salon 2021,Frogger
+391,China,1,4,423,Salon 4,Arkanoid
+392,Peru,1,5,120,Salon 3,Space Invaders
+394,Brazil,2,5,195,Salon 6,Virtua Cop
+396,China,2,4,439,Salon Carreras,Double Dragon
+402,Philippines,1,4,122,Salon 6,Galaga
+403,Czech Republic,2,5,168,Salon Carreras,Castelvania
+404,Indonesia,1,4,351,Salon 3,Double Dragon
+405,Indonesia,2,5,394,Salon Retro,Double Dragon
+408,Russia,1,4,201,Salon Retro,Tetris
+410,Russia,1,5,161,Salon 3,Double Dragon
+419,Portugal,1,5,131,Salon 4,Galaga
+424,Russia,2,5,422,Salon 1,Space Invaders
+425,Poland,1,4,288,Salon 4,Double Dragon
+427,China,1,5,166,Salon 2021,Double Dragon
+428,Indonesia,2,5,198,Salon 2,Street Fighter II
+429,China,1,4,190,Salon 3,Pacman
+430,Brazil,2,4,442,Salon 2,Tetris
+431,China,2,5,257,Salon Retro,Street Fighter II
+432,Ukraine,1,5,473,Salon 3,Frogger
+433,China,2,5,116,Salon Retro,Space Invaders
+434,Mauritania,2,5,401,Salon Carreras,Tron
+442,Dominican Republic,2,4,274,Salon 4,Asteroids
+445,Canada,1,4,403,Salon 4,Galaga
+446,Germany,1,4,136,Salon VR,Bubble Bobble
+447,China,2,5,331,Salon 6,Pacman
+449,China,2,5,476,Salon 4,Galaga
+451,Finland,1,4,335,Salon 2021,Galaga
+454,Russia,2,5,390,Salon 4,Mortal Kombat
+456,Brazil,2,4,119,Salon Carreras,Pacman
+458,China,2,4,348,Salon VR,Bubble Bobble
+460,Poland,2,5,288,Salon 2,Galaga
+462,Yemen,1,5,372,Salon 4,Tetris
+464,China,1,4,232,Salon 2021,Tetris
+466,Czech Republic,2,5,132,Salon 1,Space Invaders
+468,China,1,5,370,Salon 6,Space Invaders
+469,Iran,1,5,466,Salon Retro,Tetris
+471,Philippines,1,4,478,Salon VR,Star Wars
+472,Iran,2,5,193,Salon 2,Bubble Bobble
+474,Indonesia,2,4,142,Salon 5,Arkanoid
+477,Albania,2,4,100,Salon 3,Pacman
+481,Indonesia,2,5,488,Salon Retro,Tron
+482,Russia,1,5,354,Salon 4,Asteroids
+483,Afghanistan,2,4,331,Salon 6,Tetris
+485,France,2,4,142,Salon Carreras,Castelvania
+487,China,2,4,236,Salon 2021,Double Dragon
+488,Argentina,2,4,396,Salon VR,Arkanoid
+490,Philippines,1,5,192,Salon Retro,Mortal Kombat
+492,Portugal,1,5,199,Salon Carreras,Arkanoid
+493,Chad,2,5,186,Salon VR,Castelvania
+495,Brazil,1,5,150,Salon 3,Tetris
+496,Mexico,2,4,134,Salon 4,Pong
+498,Mozambique,2,4,359,Salon 2021,Galaga
+500,Morocco,2,4,327,Salon VR,Double Dragon

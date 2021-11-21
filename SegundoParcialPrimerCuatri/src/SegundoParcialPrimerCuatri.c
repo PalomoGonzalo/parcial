@@ -21,17 +21,20 @@ int main(void) {
 
 	LinkedList* listaArcade=ll_newLinkedList();
 
-	LinkedList* juegos=ll_newLinkedList();
+	LinkedList* listaJuegos=ll_newLinkedList();
+	LinkedList* listaFiltradaMultijugador=ll_newLinkedList();
 
 
 	controller_loadFromText("arcades.csv", listaArcade);
 	LinkedList* listaParaOrdenar=ll_newLinkedList();
 	listaParaOrdenar=ll_clone(listaArcade);
-	juegos=filtrarJuegos(listaArcade);
+	listaFiltradaMultijugador=ll_clone(listaArcade);
+
 	int option=0;
 
 	do{
-	       printf(" \nMenu:\n");
+			 listaJuegos=filtrarJuegos(listaArcade);
+	       	 printf(" \nMenu:\n");
 	         printf("1. imprimir arcades\n");
 	         printf("2. Incoroporar Arcade\n");
 	         printf("3. Modificar Arcade\n");
@@ -44,48 +47,41 @@ int main(void) {
 	    	utn_getInt(&option, "\ningrese una opcion \n", "error reingre \n", 1, 11, 3);
 	        switch(option)
 	        {
+
 	            case 1:
 	            	controller_List(listaArcade);
 	                break;
 	            case 2:
 	                controller_add(listaArcade);
+	                controller_saveAsText("arcades.csv", listaArcade);
 	                break;
 	            case 3:
-	            	//juegos=filtrarJuegos(listaArcade);
+
+	            	controller_editArcade(listaArcade, listaJuegos);
+	            	controller_saveAsText("arcades.csv", listaArcade);
+	            	break;
+	            case 4:
 	            	controller_deleteArcade(listaArcade);
 	            	controller_List(listaArcade);
 	            	break;
-	            case 4:
+	            case 5:
 	            	controller_sortArcade(listaParaOrdenar);
 	            	controller_List(listaParaOrdenar);
-	            	break;
-	            case 5:
 
-	            	controller_listJuegos(juegos);
 	            	break;
-	          /*  case 6:
-	            	if(ll_isEmpty(listaArcade)==0)
-	            	{
-	            	 controller_ListEmployee(listaArcade);
-	            	}
-	            	else
-	            		printf("no hay existe datos para listar \n");
+	           case 6:
+	            	controller_listJuegos(listaJuegos);
+	            	controller_saveAsTextJuegos("juegos.txt", listaJuegos);
 	            	break;
-	            case 7:
-	            	if(ll_isEmpty(listaArcade)==0)
-	            	{
-	            	 controller_sortEmployee(listaArcade);
-	            	 controller_ListEmployee(listaArcade);
-	            	}
-	            	else
-	            		printf("no hay existe datos para ordenar \n");
+	           case 7:
+	            	ll_filter(listaFiltradaMultijugador, controller_filtrarJugadores);
+	            	controller_saveAsText("multijugador.csv", listaFiltradaMultijugador);
+	            	controller_List(listaFiltradaMultijugador);
 	            	break;
-	            case 8:
-	            	if(ll_isEmpty(listaArcade)==0)
-	            		controller_saveAsText("data.csv", listaArcade);
-	            	else
-	            		printf("no hay existe datos guardar \n");
-	            	break;*/
+	           case 8:
+	        	   	  ll_map(listaArcade, controller_actualizarFichas);
+	        	   	  controller_List(listaArcade);
+	            	break;
 	            case 9:
 	            	ll_deleteLinkedList(listaArcade);
 	            	option=9;

@@ -1,60 +1,9 @@
-10:44:18 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\juegos.o" "src\\parser.o" 
-Info: Nothing to build for SegundoParcialPrimerCuatri
-10:44:53 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\juegos.o" "src\\parser.o" 
-10:45:31 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\juegos.o" "src\\parser.o" 
-10:47:31 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\juegos.o" "src\\parser.o" 
-10:49:28 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\juegos.o" "..\\src\\juegos.c" 
-gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\juegos.o" "src\\parser.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file SegundoParcialPrimerCuatri.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-10:49:32 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
-Info: Internal Builder is used for build
-gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\juegos.o" "src\\parser.o" 
-10:50:18 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\juegos.o" "src\\parser.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file SegundoParcialPrimerCuatri.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-10:50:22 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
-Info: Internal Builder is used for build
-gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\juegos.o" "src\\parser.o" 
-10:51:09 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\juegos.o" "src\\parser.o" 
-10:51:44 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\juegos.o" "src\\parser.o" 
-10:52:19 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-..\src\controller.c: In function 'filtrarJuegos':
-..\src\controller.c:274:2: warning: "/*" within comment [-Wcomment]
-  274 |  /*pAux=(Arcade*)ll_get(pLista, 0);
-      |   
-gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\juegos.o" "src\\parser.o" 
-10:59:15 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
-gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\juegos.o" "src\\parser.o" 
-11:02:59 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
+14:15:39 **** Incremental Build of configuration Debug for project SegundoParcialPrimerCuatri ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\SegundoParcialPrimerCuatri.o" "..\\src\\SegundoParcialPrimerCuatri.c" 
 gcc -o SegundoParcialPrimerCuatri.exe "src\\LinkedList.o" "src\\SegundoParcialPrimerCuatri.o" "src\\arcade.o" "src\\controller.o" "src\\funciones.o" "src\\juegos.o" "src\\parser.o" 
+Info: Nothing to build for SegundoParcialPrimerCuatri
+Info: Nothing to build for SegundoParcialPrimerCuatri
+Info: Nothing to build for SegundoParcialPrimerCuatri
+Info: Nothing to build for SegundoParcialPrimerCuatri
